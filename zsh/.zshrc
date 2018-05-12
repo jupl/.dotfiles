@@ -16,10 +16,25 @@ fi
 # Set up antibody
 if (( $+commands[antibody] )); then
   export ANTIBODY_HOME="$DOTFILES/zsh/antibody"
-  antibody_local="$DOTFILES/zsh/local.zsh"
+  antibody_script="$DOTFILES/zsh/local.zsh"
   antibody_plugins="$ANTIBODY_HOME/plugins"
-  if ! [[ -f "$antibody_local" ]] || [ "$antibody_plugins" -nt "$antibody_local" ]; then
-    antibody bundle < "$antibody_plugins" > "$antibody_local"
+  antibody_local="$HOME/.antibody"
+  if ! [[ -f "$antibody_script" ]]; then
+    antibody_init=1
+  elif [[ "$antibody_plugins" -nt "$antibody_script" ]]; then
+    antibody_init=1
+  elif ! [[ -f "$antibody_local" ]]; then
+    unset antibody_init
+  elif [[ "$antibody_local" -nt "$antibody_script" ]]; then
+    antibody_init=1
+  else
+    unset antibody_init
+  fi
+  if [[ -n "$antibody_init" ]]; then
+    antibody bundle < "$antibody_plugins" > "$antibody_script"
+    if [[ -f "$antibody_local" ]]; then
+      antibody bundle < "$antibody_local" >> "$antibody_script"
+    fi
   fi
 fi
 
