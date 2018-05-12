@@ -5,6 +5,7 @@ install\..*
 Brewfile
 Debian
 Ubuntu
+README\..*
 ^/antibody
 ^/bin
 ^/tpm
