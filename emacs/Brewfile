@@ -1,0 +1,16 @@
+tap 'caskroom/fonts'
+tap 'railwaycat/emacsmacport'
+
+brew 'ack'
+brew 'aspell'
+brew 'graphviz'
+brew 'isync'
+brew 'mu', args: ['with-emacs']
+# brew 'plantuml'
+brew 'pt'
+brew 'the_silver_searcher'
+
+cask_args appdir: '/Applications'
+cask 'emacs-mac-spacemacs-icon'
+cask 'font-fira-code'
+cask 'font-fira-sans'

@@ -1,0 +1,5 @@
+tap 'getantibody/tap'
+tap 'homebrew/command-not-found'
+
+brew 'antibody'
+brew 'zsh'

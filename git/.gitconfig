@@ -1,0 +1,19 @@
+[apply]
+  whitespace = fix
+[core]
+  excludesfile = ~/.gitignore
+  editor = vim
+[difftool]
+  prompt = false
+[help]
+  autocorrect = 1
+[include]
+  path = ~/.gitconfig.local
+[mergetool]
+  keepBackup = false
+[push]
+  default = simple
+[remote]
+  pushDefault = origin
+[status]
+  submoduleSummary = true

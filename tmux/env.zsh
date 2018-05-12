@@ -1,0 +1,1 @@
+export TMUX_PLUGIN_MANAGER_PATH="$DOTFILES/tmux/tpm"

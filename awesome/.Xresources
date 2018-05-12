@@ -1,0 +1,24 @@
+URxvt*font: xft:Fira Mono:size=10
+URxvt*internalBorder: 8
+URxvt*letterSpace: -1
+URxvt*saveLines: 0
+URxvt*scrollBar: false
+
+URxvt*background: #282c34
+URxvt*foreground: #bbc2cf
+URxvt*color0: #1b2229
+URxvt*color1: #ff6c6b
+URxvt*color2: #98be65
+URxvt*color3: #ecbe7b
+URxvt*color4: #51afef
+URxvt*color5: #c678dd
+URxvt*color6: #5699af
+URxvt*color7: #bbc2cf
+URxvt*color8: #5b6268
+URxvt*color9: #ff6c6b
+URxvt*color10: #98be65
+URxvt*color11: #ecbe7b
+URxvt*color12: #51afef
+URxvt*color13: #c678dd
+URxvt*color14: #46d9ff
+URxvt*color15: #dfdfdf

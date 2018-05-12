@@ -1,0 +1,19 @@
+" General remapping
+nnoremap ; :
+vnoremap ; :
+
+" Editing
+set clipboard=unnamed
+set backspace=indent,eol,start
+set autoindent
+set expandtab
+
+" Search
+set ignorecase
+set incsearch
+set nohlsearch
+set smartcase
+
+" Appearance
+set number
+set cursorline

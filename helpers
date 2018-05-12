@@ -1,0 +1,77 @@
+#!/bin/bash
+
+unset GUI
+if [[ "$(uname -s 2>/dev/null)" == Darwin ]]; then
+  OS=macos
+  GUI=1
+elif [[ "$(lsb_release -i -s 2>/dev/null)" == Ubuntu ]]; then
+  OS=ubuntu
+  if dpkg -l ubuntu-desktop &>/dev/null; then GUI=1; fi
+elif [[ "$(lsb_release -i -s 2>/dev/null)" == Debian ]]; then
+  OS=debian
+  # TODO detect GUI support in debian here
+else
+  OS=unknown
+fi
+
+# Install dependencies based on file system
+function install_deps {
+  # For macOS, just use Homebrew
+  if [[ "$OS" == macos ]]; then
+    if [[ -f Brewfile ]]; then
+      echo '--- Installing dependencies via Homebrew'
+      brew bundle
+    fi
+    return
+  fi
+
+  # Read dependencies
+  local deps
+  case "$OS" in
+    debian)
+      if [[ ! -f Debian ]]; then return; fi
+      mapfile -t deps < Debian
+      ;;
+    ubuntu)
+      if [[ ! -f Ubuntu ]]; then return; fi
+      mapfile -t deps < Ubuntu
+      ;;
+    *)
+      echo "!!! Unsupported OS to install dependencies: $OS"
+      return 1
+      ;;
+  esac
+
+  # Filter dependencies based on criteria
+  local exclude
+  local cleanup
+  if [[ -n "$GUI" ]]; then
+    exclude=NOGUI
+    cleanup=GUI
+  else
+    exclude=GUI
+    cleanup=NOGUI
+  fi
+  deps=${deps[*]//*\($exclude\)/}
+  deps=${deps//\($cleanup\)/}
+
+  # Execute
+  case $OS in
+    debian | ubuntu)
+      if ! dpkg-query -s $deps &>/dev/null; then
+        echo '--- Installing dependencies via apt'
+        sudo apt -y install $deps
+      fi
+      ;;
+  esac
+  if [[ $? -ne 0 ]]; then
+    echo '!!! Failed to install dependencies'
+    exit 1
+  fi
+}
+
+# Remove functions used only for installation
+function cleanup_helpers {
+  unset -f cleanup_helpers
+  unset -f install_deps
+}

@@ -1,0 +1,7 @@
+*  Dotfiles
+** Setup
+#+BEGIN_SRC sh
+git clone --recurse-submodules [url]
+cd .dotfiles
+make # Shows commands
+#+END_SRC

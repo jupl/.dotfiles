@@ -1,0 +1,9 @@
+# -*- mode: gitconfig -*-
+
+[user]
+  name = USER_NAME
+  email = USER_EMAIL
+[credential]
+  helper = CREDENTIAL_HELPER
+# [url "git@github.com:"]
+#   pushInsteadOf = https://github.com/

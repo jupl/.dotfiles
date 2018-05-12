@@ -1,0 +1,5 @@
+tap 'caskroom/fonts'
+
+cask_args appdir: '/Applications'
+cask 'basictex'
+cask 'font-fira-sans'
