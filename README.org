@@ -1,7 +1,69 @@
-*  Dotfiles
-** Setup
-#+BEGIN_SRC sh
-git clone --recurse-submodules [url]
-cd .dotfiles
-make # Shows commands
-#+END_SRC
+#+HTML: <h1>.dotfiles <sub><sub><sub>Preferences, Installs, etc.</sub></sub></sub></h1>
+
+** Table of Contents
+- [[#about][About]]
+- [[#prerequisites][Prerequisites]]
+- [[#getting-started][Getting Started]]
+- [[#project-structure][Project Structure]]
+- [[#tasks][Tasks]]
+- [[#credits][Credits]]
+
+** About
+Personal collection of configurations for a system. Objective is to set up environment as easily as possible, especially on a new machine. Current supported platforms:
+  - [[https://www.apple.com/macos/][macOS]] (10.13+)
+  - [[https://www.kernel.org/linux.html][Linux]]
+    - [[https://www.debian.org/][Debian]] (9.4+, [[https://github.com/jupl/.dotfiles/issues?q=is%3Aissue+is%3Aopen+label%3Adebian][WIP]])
+    - [[https://www.ubuntu.com/][Ubuntu]] (18.04+)
+
+^{[[#dotfiles-preferences-installs-etc][Back to top]]}
+
+** Prerequisites
+- macOS
+  - Apple Command Line Tools
+- Linux
+  - [[https://www.gnu.org/software/make/manual/make.html][Make]]
+  - [[https://git-scm.com/][Git]]
+- Debian
+  - [[http://milq.github.io/enable-sudo-user-account-debian/][sudo]]
+
+^{[[#dotfiles-preferences-installs-etc][Back to top]]}
+
+** Getting Started
+1. Clone/download this repository.
+   - Location matters as symlinks are generated
+   - Use =--recurse-submodules= as this uses submodules
+2. Use =make= to perform tasks. For a first-time install you should do the following:
+   1. =[[#make-install][make install]]=
+   2. =[[#make-symlink][make symlink]]=
+
+^{[[#dotfiles-preferences-installs-etc][Back to top]]}
+
+** Project Structure
+*** Overview
+COMING SOON
+*** Domains
+COMING SOON
+*** Dependencies
+COMING SOON
+*** Symlinks
+COMING SOON
+
+^{[[#dotfiles-preferences-installs-etc][Back to top]]}
+
+** Tasks
+Tasks are defined in the =Makefile= that is to be used with [[https://www.gnu.org/software/make/manual/make.html][Make]].
+*** =make=
+List commands and options
+*** =make install=
+Install and set up dependencies
+*** =make symlink=
+Link dotfiles to required paths relative to =$HOME=
+*** =make update=
+Update this project and submodules
+
+^{[[#dotfiles-preferences-installs-etc][Back to top]]}
+
+** Credits
+- [[https://github.com/holman/dotfiles][holman's dotfiles]] :: My first entry into dotfiles, some concepts inspired/copied here
+
+^{[[#dotfiles-preferences-installs-etc][Back to top]]}
