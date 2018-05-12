@@ -1,80 +1,80 @@
 [submodule "agkozak/agkozak-zsh-theme"]
-  path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-agkozak-SLASH-agkozak-zsh-theme
-  url = https://github.com/agkozak/agkozak-zsh-theme
-  branch = master
+	path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-agkozak-SLASH-agkozak-zsh-theme
+	url = https://github.com/agkozak/agkozak-zsh-theme
+	branch = master
 [submodule "chrissicool/zsh-256color"]
-  path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-chrissicool-SLASH-zsh-256color
-  url = https://github.com/chrissicool/zsh-256color
-  branch = master
+	path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-chrissicool-SLASH-zsh-256color
+	url = https://github.com/chrissicool/zsh-256color
+	branch = master
 [submodule "hlissner/zsh-autopair"]
-  path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-hlissner-SLASH-zsh-autopair
-  url = https://github.com/hlissner/zsh-autopair
-  branch = master
+	path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-hlissner-SLASH-zsh-autopair
+	url = https://github.com/hlissner/zsh-autopair
+	branch = master
 [submodule "joow/macos"]
-  path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-joow-SLASH-macos
-  url = https://github.com/joow/macos
-  branch = master
+	path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-joow-SLASH-macos
+	url = https://github.com/joow/macos
+	branch = master
 [submodule "jupl/.spacemacs.d"]
-  path = emacs/.spacemacs.d
-  url = https://github.com/jupl/.spacemacs.d
-  branch = master
+	path = emacs/.spacemacs.d
+	url = https://github.com/jupl/.spacemacs.d
+	branch = master
 [submodule "lukechilds/zsh-better-npm-completion"]
-  path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-lukechilds-SLASH-zsh-better-npm-completion
-  url = https://github.com/lukechilds/zsh-better-npm-completion
-  branch = master
+	path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-lukechilds-SLASH-zsh-better-npm-completion
+	url = https://github.com/lukechilds/zsh-better-npm-completion
+	branch = master
 [submodule "robbyrussell/oh-my-zsh"]
 	path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh
-  branch = master
+	branch = master
 [submodule "sharat87/zsh-vim-mode"]
-  path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-sharat87-SLASH-zsh-vim-mode
-  url = https://github.com/sharat87/zsh-vim-mode
-  branch = master
+	path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-sharat87-SLASH-zsh-vim-mode
+	url = https://github.com/sharat87/zsh-vim-mode
+	branch = master
 [submodule "syl20bnr/spacemacs"]
-  path = emacs/.emacs.d
-  url = https://github.com/syl20bnr/spacemacs
-  branch = develop
+	path = emacs/.emacs.d
+	url = https://github.com/syl20bnr/spacemacs
+	branch = develop
 [submodule "tmux-plugins/tmux-prefix-highlight"]
 	path = tmux/tpm/tmux-prefix-highlight
 	url = https://github.com/tmux-plugins/tmux-prefix-highlight
-  branch = master
+	branch = master
 [submodule "tmux-plugins/tmux-sensible"]
-  path = tmux/tpm/tmux-sensible
-  url = https://github.com/tmux-plugins/tmux-sensible
-  branch = master
+	path = tmux/tpm/tmux-sensible
+	url = https://github.com/tmux-plugins/tmux-sensible
+	branch = master
 [submodule "tmux-plugins/tmux-yank"]
-  path = tmux/tpm/tmux-yank
-  url = https://github.com/tmux-plugins/tmux-yank
-  branch = master
+	path = tmux/tpm/tmux-yank
+	url = https://github.com/tmux-plugins/tmux-yank
+	branch = master
 [submodule "tmux-plugins/tpm"]
-  path = tmux/tpm/tpm
-  url = https://github.com/tmux-plugins/tpm
-  branch = master
+	path = tmux/tpm/tpm
+	url = https://github.com/tmux-plugins/tpm
+	branch = master
 [submodule "soyuka/tmux-current-pane-hostname"]
 	path = tmux/tpm/tmux-current-pane-hostname
 	url = https://github.com/soyuka/tmux-current-pane-hostname
-  branch = master
+	branch = master
 [submodule "vasyharan/zsh-brew-services"]
-  path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-vasyharan-SLASH-zsh-brew-services
-  url = https://github.com/vasyharan/zsh-brew-services
-  branch = master
+	path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-vasyharan-SLASH-zsh-brew-services
+	url = https://github.com/vasyharan/zsh-brew-services
+	branch = master
 [submodule "yous/vanilli.sh"]
-  path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-yous-SLASH-vanilli.sh
-  url = https://github.com/yous/vanilli.sh
-  branch = master
+	path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-yous-SLASH-vanilli.sh
+	url = https://github.com/yous/vanilli.sh
+	branch = master
 [submodule "zakariaGatter/MarkGate"]
-  path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-zakariaGatter-SLASH-MarkGate
-  url = https://github.com/zakariaGatter/MarkGate
-  branch = master
+	path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-zakariaGatter-SLASH-MarkGate
+	url = https://github.com/zakariaGatter/MarkGate
+	branch = master
 [submodule "zdharma/fast-syntax-highlighting"]
-  path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-zdharma-SLASH-fast-syntax-highlighting
-  url = https://github.com/zdharma/fast-syntax-highlighting
-  branch = master
+	path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-zdharma-SLASH-fast-syntax-highlighting
+	url = https://github.com/zdharma/fast-syntax-highlighting
+	branch = master
 [submodule "zsh-users/zsh-autosuggestions"]
-  path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-zsh-users-SLASH-zsh-autosuggestions
-  url = https://github.com/zsh-users/zsh-autosuggestions
-  branch = master
+	path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-zsh-users-SLASH-zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+	branch = master
 [submodule "zsh-users/zsh-history-substring-search"]
-  path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-zsh-users-SLASH-zsh-history-substring-search
-  url = https://github.com/zsh-users/zsh-history-substring-search
-  branch = master
+	path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-zsh-users-SLASH-zsh-history-substring-search
+	url = https://github.com/zsh-users/zsh-history-substring-search
+	branch = master
