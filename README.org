@@ -33,8 +33,8 @@ Personal collection of configurations for a system. Objective is to set up envir
    - Location matters as symlinks are generated
    - Use =--recurse-submodules= as this uses submodules
 2. Use =make= to perform tasks. For a first-time install you should do the following:
-   1. =[[#make-install][make install]]=
-   2. =[[#make-symlink][make symlink]]=
+   1. [[#make-install][make install]]
+   2. [[#make-symlink][make symlink]]
 
 ^{[[#dotfiles-preferences-installs-etc][Back to top]]}
 
