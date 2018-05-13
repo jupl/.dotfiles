@@ -1,4 +1,4 @@
-if (( $+commands[tmux] )); then
+if (( $+commands[tmux] )) && [[ -n "$TMUX" ]]; then
   function tmuxn  { tmux new-window "$*"; }
   function tmuxs  { tmux split-window -v -c '#{pane_current_path}' "$*"; }
   function tmuxsf { tmux split-window -v -f -c '#{pane_current_path}' "$*"; }
