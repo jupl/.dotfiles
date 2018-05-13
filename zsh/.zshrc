@@ -1,3 +1,10 @@
+# Add support to launch one off Emacs commands with zsh config
+if [[ -n "$DISPLAY" ]] && [[ -n "$EMACS_LAUNCH" ]]; then
+  unset EMACS_LAUNCH
+  exec emacs
+  exit
+fi
+
 # Start tmux if not running already, plus verify it works
 if (( $+commands[tmux] )) && [[ -z "$EMACS" ]] && [[ -z "$TMUX" ]]; then
   tmux -V >/dev/null
