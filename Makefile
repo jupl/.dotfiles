@@ -8,6 +8,7 @@ packages_from_file=\
 
 # Search for packages, ensuring that OS packages are first with any filters
 # http://blog.jgc.org/2007/06/escaping-comma-and-space-in-gnu-make.html
+# [backup] http://archive.is/XYuEV
 ,:=,
 space:=
 space+=
@@ -49,8 +50,10 @@ installer_rules:=$(addsuffix /install.sh,$(installers))
 
 #
 # Tasks
+# https://blog.sneawo.com/blog/2017/06/13/makefile-help-target/
+# [backup] http://archive.is/XFLAz
 #
-help: # https://blog.sneawo.com/blog/2017/06/13/makefile-help-target/
+help:
 	@egrep '^(.+)\:\ .*##\ (.+)' ${MAKEFILE_LIST}\
 	| sed 's/:.*##/#/'\
 	| column -t -c 2 -s '#'
