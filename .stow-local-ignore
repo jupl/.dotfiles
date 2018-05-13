@@ -1,11 +1,11 @@
 .*\.zsh
-install\..*
-\.DS_Store
 .*\.example
-Brewfile
-Debian
-Ubuntu
-README\..*
+\.DS_Store
+^/README\..*
+^/install\..*
+^/Brewfile
+^/Debian
+^/Ubuntu
 ^/antibody
 ^/bin
 ^/tpm
