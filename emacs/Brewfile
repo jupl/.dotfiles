@@ -6,7 +6,6 @@ brew 'aspell'
 brew 'graphviz'
 brew 'isync'
 brew 'mu', args: ['with-emacs']
-# brew 'plantuml'
 brew 'pt'
 brew 'the_silver_searcher'
 
