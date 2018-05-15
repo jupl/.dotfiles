@@ -4,7 +4,7 @@ cd "$(dirname "$0")"
 source ../helpers
 
 if [[ "$OS" == macos ]] || [[ -z "$GUI" ]]; then
-  echo '!!! This is not available for macOS nor non GUI'
+  echo '!!! This script is only available for Linux with GUI'
   exit 1
 fi
 
