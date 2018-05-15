@@ -3,8 +3,8 @@
 cd "$(dirname "$0")"
 source ../helpers
 
-if [[ "$OS" != ubuntu ]]; then
-  echo '!!! This script is only available for Ubuntu'
+if [[ "$OS" != debian ]]; then
+  echo '!!! This script is only available for Debian'
   exit 1
 fi
 

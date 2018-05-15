@@ -16,9 +16,9 @@ $(space)+=
 os:=$(shell source helpers && echo $$OS)
 gui:=$(shell source helpers && echo $$GUI)
 os_packages:=debian macos ubuntu
-packages:=common \
+packages:=\
 	$(filter $(os_packages),$(os))\
-	$(filter-out common $(os_packages),$(subst /,,$(wildcard */)))
+	$(filter-out $(os_packages),$(subst /,,$(wildcard */)))
 ifdef EXCLUDE
 	packages:=$(filter-out $(subst $(,),$( ),$(EXCLUDE)),$(packages))
 endif
