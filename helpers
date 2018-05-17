@@ -10,6 +10,9 @@ elif [[ "$(lsb_release -i -s 2>/dev/null)" == Ubuntu ]]; then
 elif [[ "$(lsb_release -i -s 2>/dev/null)" == Debian ]]; then
   OS=debian
   # TODO detect GUI support in debian here
+elif [[ -e /etc/alpine-release ]]; then
+  OS=alpine
+  # TODO detect GUI support in debian here
 else
   OS=unknown
 fi
@@ -28,6 +31,10 @@ function install_deps {
   # Read dependencies
   local deps
   case "$OS" in
+    alpine)
+      if [[ ! -f Alpine ]]; then return; fi
+      mapfile -t deps < Alpine
+      ;;
     debian)
       if [[ ! -f Debian ]]; then return; fi
       mapfile -t deps < Debian
@@ -57,6 +64,11 @@ function install_deps {
 
   # Execute
   case $OS in
+    alpine)
+      # TODO check if packages are already isntalled
+      echo '--- Installing dependencies via apk'
+      sudo apk add $deps
+      ;;
     debian | ubuntu)
       if ! dpkg-query -s $deps &>/dev/null; then
         echo '--- Installing dependencies via apt'
