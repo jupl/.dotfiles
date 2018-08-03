@@ -45,7 +45,7 @@ envs:=\
 # Establish rules
 installer_rules:=$(addsuffix /install.sh,$(installers))
 
-.PHONY: help clean install symlink update $(installer_rules)
+.PHONY: help clean auto install symlink update $(installer_rules)
 .SUFFIXES:
 
 #
@@ -66,11 +66,12 @@ help:
 	@echo "    Shell - $(sort $(envs))"
 	@echo
 	@echo 'Variables:'
-	@echo '  INCLUDE - Packages to only include (ex: node,tmux,zsh)'
-	@echo '  EXCLUDE - Packages to exclude (ex: emacs,go,latex)'
+	@echo '  INCLUDE - Packages to only include: $(INCLUDE)'
+	@echo '  EXCLUDE - Packages to exclude: $(EXCLUDE)'
 clean: ## Clean up
 	@printf '==> '
 	stow -D $(stows)
+auto: update install symlink ## Run update, install, and symlink
 install: $(installer_rules) ## Install required dependencies
 symlink: ## Symlink configuration files
 	@printf '==> '
