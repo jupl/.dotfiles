@@ -1,6 +1,11 @@
 MAKEFLAGS+=--no-builtin-rules
 SHELL:=/usr/bin/env bash
 
+# Default list of exclude modules
+ifndef EXCLUDE
+  EXCLUDE:=go,java
+endif
+
 # Functions
 packages_from_file=\
 	$(patsubst %/$1,%$(if $2,/$2,),\
