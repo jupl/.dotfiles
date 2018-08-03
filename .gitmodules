@@ -1,6 +1,6 @@
-[submodule "agkozak/agkozak-zsh-theme"]
-	path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-agkozak-SLASH-agkozak-zsh-theme
-	url = https://github.com/agkozak/agkozak-zsh-theme
+[submodule "agkozak/agkozak-zsh-prompt"]
+	path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-agkozak-SLASH-agkozak-zsh-prompt
+	url = https://github.com/agkozak/agkozak-zsh-prompt
 	branch = master
 [submodule "chrissicool/zsh-256color"]
 	path = zsh/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-chrissicool-SLASH-zsh-256color
