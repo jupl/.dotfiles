@@ -83,9 +83,9 @@ symlink: ## Symlink configuration files
 	stow $(stows)
 update: ## Update dotfiles
 	@printf '==> '
-	git pull --rebase --autostash --recurse-submodules
+	git pull --rebase --autostash
 	@printf '==> '
-	git submodule update --init --recursive
+	git submodule update --init --remote
 
 #
 # Internal tasks
