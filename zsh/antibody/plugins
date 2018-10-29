@@ -9,8 +9,8 @@ chrissicool/zsh-256color
 hlissner/zsh-autopair
 joow/macos
 lukechilds/zsh-better-npm-completion
-robbyrussell/oh-my-zsh folder:plugins/colored-man-pages
-robbyrussell/oh-my-zsh folder:plugins/command-not-found
+robbyrussell/oh-my-zsh path:plugins/colored-man-pages
+robbyrussell/oh-my-zsh path:plugins/command-not-found
 sharat87/zsh-vim-mode
 vasyharan/zsh-brew-services
 zakariaGatter/MarkGate
