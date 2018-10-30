@@ -22,12 +22,12 @@ local options = {
   tags = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0},
 }
 
-os.execute('compton -b')
-os.execute('pidof redshift || redshift &')
-os.execute('pidof unclutter || unclutter -root &')
-os.execute('pidof urxvtd || urxvtd &')
+os.execute('which compton && compton -b')
+os.execute('which redshift && (pidof redshift || redshift &)')
+os.execute('which unclutter && (pidof unclutter || unclutter -root &)')
+os.execute('which urxvtd && (pidof urxvtd || urxvtd &)')
 os.execute('which vmware-user-suid-wrapper && vmware-user-suid-wrapper')
-os.execute('xrdb -merge ~/.Xresources')
+os.execute('which xrdb && xrdb -merge ~/.Xresources')
 require('.awesome')(options)
 require('.bar')(options)
 require('.client')(options)
