@@ -10,9 +10,12 @@ elif [[ "$(lsb_release -i -s 2>/dev/null)" == Ubuntu ]]; then
 elif [[ "$(lsb_release -i -s 2>/dev/null)" == Debian ]]; then
   OS=debian
   # TODO detect GUI support in debian here
+elif [[ "$(lsb_release -i -s 2>/dev/null)" == VoidLinux ]]; then
+  OS=void
+  # TODO detect GUI support in void here
 elif [[ -e /etc/alpine-release ]]; then
   OS=alpine
-  # TODO detect GUI support in debian here
+  # TODO detect GUI support in alpine here
 else
   OS=unknown
 fi
@@ -43,6 +46,10 @@ function install_deps {
       if [[ ! -f Ubuntu ]]; then return; fi
       mapfile -t deps < Ubuntu
       ;;
+    void)
+      if [[ ! -f Void ]]; then return; fi
+      mapfile -t deps < Void
+      ;;
     *)
       echo "!!! Unsupported OS to install dependencies: $OS"
       return 1
@@ -65,7 +72,7 @@ function install_deps {
   # Execute
   case $OS in
     alpine)
-      # TODO check if packages are already isntalled
+      # TODO check if packages are already installed
       echo '--- Installing dependencies via apk'
       sudo apk add $deps
       ;;
@@ -74,6 +81,11 @@ function install_deps {
         echo '--- Installing dependencies via apt'
         sudo apt -y install $deps
       fi
+      ;;
+    void)
+      # TODO check if packages are already installed
+      echo '--- Installing dependencies via xbps'
+      sudo xbps-install -Sy $deps
       ;;
   esac
   if [[ $? -ne 0 ]]; then

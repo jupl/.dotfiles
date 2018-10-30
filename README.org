@@ -15,6 +15,7 @@ Personal collection of configurations for a system. Objective is to set up envir
     - [[https://alpinelinux.org/][Alpine]] (3.7.0+)
     - [[https://www.debian.org/][Debian]] (9.4+, [[https://github.com/jupl/.dotfiles/issues?q=is%3Aissue+is%3Aopen+label%3Adebian][WIP]])
     - [[https://www.ubuntu.com/][Ubuntu]] (18.04+)
+    - [[https://voidlinux.org/][Void]]
 
 ^{[[#dotfiles-preferences-installs-etc][Back to top]]}
 
