@@ -20,9 +20,9 @@ local options = {
   modkey = 'Mod1',
   screen = screen,
   tags = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0},
+  transparency = os.execute('which compton && (compton -b || true)'),
 }
 
-os.execute('which compton && compton -b')
 os.execute('which redshift && (pidof redshift || redshift &)')
 os.execute('which unclutter && (pidof unclutter || unclutter -root &)')
 os.execute('which urxvtd && (pidof urxvtd || urxvtd &)')
