@@ -20,6 +20,7 @@ return function(options)
     fg_normal = colors.normal,
     fg_minimize = colors.minimal,
     font = 'Fira Sans medium 9',
+    hotkeys_bg = options.transparency and colors.hidden..'E7' or colors.hidden,
     layout_dwindle = images_dir..'/layout/dwindle.png',
     layout_fairv = images_dir..'/layout/fairv.png',
     layout_fairh = images_dir..'/layout/fairh.png',
