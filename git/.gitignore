@@ -1,4 +1,7 @@
-# Created by http://www.gitignore.io
+_minted-*
+
+# Created by https://www.gitignore.io/api/emacs,vim,visualstudiocode,sublimetext,linux,macos,windows
+# Edit at https://www.gitignore.io/?templates=emacs,vim,visualstudiocode,sublimetext,linux,macos,windows
 
 ### Emacs ###
 # -*- mode: gitignore; -*-
@@ -31,29 +34,38 @@ tramp
 # AUCTeX auto folder
 /auto/
 
+# cask packages
+.cask/
+dist/
 
-### vim ###
-[._]*.s[a-w][a-z]
-[._]s[a-w][a-z]
-*.un~
-Session.vim
-.netrwhist
-*~
+# Flycheck
+flycheck_*.el
 
+# server auth directory
+/server/
 
-### SublimeText ###
-# workspace files are user-specific
-*.sublime-workspace
+# projectiles files
+.projectile
 
-# project files should be checked into the repository, unless a significant
-# proportion of contributors will probably not be using SublimeText
-# *.sublime-project
+# directory configuration
+.dir-locals.el
 
-#sftp configuration file
-sftp-config.json
+### Linux ###
 
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
 
-### OSX ###
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+
+### macOS ###
+# General
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -61,13 +73,17 @@ sftp-config.json
 # Icon must end with two \r
 Icon
 
-
 # Thumbnails
 ._*
 
-# Files that might appear on external disk
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
 .Spotlight-V100
+.TemporaryItems
 .Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
 
 # Directories potentially created on remote AFP share
 .AppleDB
@@ -76,21 +92,78 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+### SublimeText ###
+# Cache files for Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
 
-### Linux ###
-*~
+# Workspace files are user-specific
+*.sublime-workspace
 
-# KDE directory preferences
-.directory
+# Project files should be checked into the repository, unless a significant
+# proportion of contributors will probably not be using Sublime Text
+# *.sublime-project
 
+# SFTP configuration file
+sftp-config.json
+
+# Package control specific files
+Package Control.last-run
+Package Control.ca-list
+Package Control.ca-bundle
+Package Control.system-ca-bundle
+Package Control.cache/
+Package Control.ca-certs/
+Package Control.merged-ca-bundle
+Package Control.user-ca-bundle
+oscrypto-ca-bundle.crt
+bh_unicode_properties.cache
+
+# Sublime-github package stores a github token in this file
+# https://packagecontrol.io/packages/sublime-github
+GitHub.sublime-settings
+
+### Vim ###
+# Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Session
+Session.vim
+
+# Temporary
+.netrwhist
+# Auto-generated tag files
+tags
+# Persistent undo
+[._]*.un~
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
 
 ### Windows ###
-# Windows image file caches
+# Windows thumbnail cache files
 Thumbs.db
 ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
 
 # Folder config file
-Desktop.ini
+[Dd]esktop.ini
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
@@ -98,5 +171,11 @@ $RECYCLE.BIN/
 # Windows Installer files
 *.cab
 *.msi
+*.msix
 *.msm
 *.msp
+
+# Windows shortcuts
+*.lnk
+
+# End of https://www.gitignore.io/api/emacs,vim,visualstudiocode,sublimetext,linux,macos,windows
