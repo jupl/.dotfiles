@@ -10,14 +10,14 @@ if ! which zsh &>/dev/null; then
   exit
 fi
 
-if [[ "$OS" == macos ]] && ! (cat /etc/shells | grep "$(which zsh)" &>/dev/null); then
+if [[ "$OS" == macos ]] && ! (chsh -l | grep "$(which zsh)" &>/dev/null); then
   echo '--- Adding Homebrew zsh to /etc/shells'
   echo "$(which zsh)" | sudo tee -a /etc/shells >/dev/null
 fi
 
 if ! echo $SHELL | grep zsh$ &>/dev/null; then
   echo '--- Changing shell to zsh'
-  chsh -s "$(which zsh)" >/dev/null
+  chsh -s "$(chsh -l | grep zsh | tail -n 1)" >/dev/null
 fi
 
 if ! which antibody &>/dev/null; then

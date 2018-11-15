@@ -13,14 +13,14 @@ local fixed = require('wibox.layout.fixed')
 local systray = require('wibox.widget.systray')
 local textclock = require('wibox.widget.textclock')
 
+local bars = {}
 local bar_autohide_opacity = 0
-local bar_key = '_bar'
 local bar_visible = {
   mouse = false,
   prompt = false,
 }
 local group = 'Bar'
-local prompt_box_key = '_prompt_box'
+local prompt_box = prompt_widget()
 local system_tray = systray()
 local text_clock = textclock('%A · %B %d · %I:%M')
 
@@ -29,7 +29,7 @@ local function redraw_bar(screen)
   for _, visible_sub in pairs(bar_visible) do
     visible = visible or visible_sub
   end
-  screen[bar_key].opacity = visible and 1 or bar_autohide_opacity
+  bars[screen].opacity = visible and 1 or bar_autohide_opacity
 end
 
 local function redraw_bars()
@@ -65,7 +65,7 @@ local function lua_prompt()
   show_bars_via_prompt()
   prompt.run {
     prompt = ' Lua: ',
-    textbox = ascreen.focused()[bar_key][prompt_box_key].widget,
+    textbox = prompt_box.widget,
     exe_callback = util.eval,
     done_callback = hide_bars_via_prompt,
     history_path = util.get_cache_dir()..'/history_eval',
@@ -76,7 +76,7 @@ local function run_prompt()
   show_bars_via_prompt()
   prompt.run {
     prompt = ' Exec: ',
-    textbox = ascreen.focused()[bar_key][prompt_box_key].widget,
+    textbox = prompt_box.widget,
     exe_callback = spawn,
     done_callback = hide_bars_via_prompt,
     history_path = util.get_cache_dir()..'/history',
@@ -84,16 +84,16 @@ local function run_prompt()
 end
 
 local function setup_bar(screen)
-  local bar = screen[bar_key]
-  if screen[bar_key] then
+  local bar = bars[screen]
+  if bar then
     bar:remove()
-    screen[bar_key] = nil
+    bars[screen] = nil
   end
-  local prompt_box = prompt_widget()
   bar = wibar {
     position = 'top',
     screen = screen,
   }
+  bars[screen] = bar
   bar:setup {
     layout = align.horizontal,
     expand = 'none',
@@ -114,8 +114,6 @@ local function setup_bar(screen)
   }
   bar:connect_signal('mouse::enter', show_bars_via_mouse)
   bar:connect_signal('mouse::leave', hide_bars_via_mouse)
-  bar[prompt_box_key] = prompt_box
-  screen[bar_key] = bar
 end
 
 return function(options)

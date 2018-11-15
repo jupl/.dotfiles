@@ -34,7 +34,7 @@ end
 
 return function(options)
   options.awesome.connect_signal('debug::error', notify_error)
-  beautiful.init(theme)
+  beautiful.init(theme(options))
   layout.layouts = options.layouts
   ascreen.connect_for_each_screen(set_wallpaper)
   options.screen.connect_signal('property::geometry', set_wallpaper)
