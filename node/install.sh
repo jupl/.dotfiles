@@ -18,7 +18,6 @@ fi
 
 echo '--- Configuring npm defaults'
 npm config set prefix "$HOME/.npm"
-npm config set loglevel silent
 npm config set progress false
 
 PATH="$PATH:$HOME/.npm/bin"
