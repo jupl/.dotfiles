@@ -3,6 +3,7 @@ tap 'railwaycat/emacsmacport'
 
 brew 'ack'
 brew 'aspell'
+brew 'emacs-mac', args: ['with-modules', 'with-xml2', 'with-natural-title-bar', 'with-spacemacs-icon']
 brew 'graphviz'
 brew 'isync'
 brew 'mu', args: ['with-emacs']
@@ -10,6 +11,5 @@ brew 'pt'
 brew 'the_silver_searcher'
 
 cask_args appdir: '/Applications'
-cask 'emacs-mac-spacemacs-icon'
 cask 'font-fira-code'
 cask 'font-fira-sans'
