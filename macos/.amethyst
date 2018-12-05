@@ -149,7 +149,7 @@
   "window-margin-size": 22,
   "window-resize-step": 5,
   "window-margins": true,
-  "ignore-menu-bar": false,
+  "ignore-menu-bar": true,
   "use-canary-build": false,
   "new-windows-to-main": false,
   "send-crash-reports": false
