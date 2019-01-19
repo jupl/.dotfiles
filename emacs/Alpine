@@ -1,4 +1,5 @@
 ack
 aspell
-emacs
+emacs-x11
 graphviz
+ncurses
