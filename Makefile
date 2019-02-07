@@ -21,7 +21,7 @@ $(space):=
 $(space)+=
 os:=$(shell source helpers && echo $$OS)
 gui:=$(shell source helpers && echo $$GUI)
-os_packages:=alpine debian macos ubuntu void
+os_packages:=debian macos ubuntu void
 packages:=\
 	$(filter $(os_packages),$(os))\
 	$(filter-out $(os_packages),$(subst /,,$(wildcard */)))
