@@ -17,7 +17,7 @@ fi
 
 if ! echo $SHELL | grep zsh$ &>/dev/null; then
   echo '--- Changing shell to zsh'
-  chsh -s "$(chsh -l | grep zsh | tail -n 1)" >/dev/null
+  chsh -s "$(cat /etc/shells | grep zsh | tail -n 1)" >/dev/null
 fi
 
 if ! which antibody &>/dev/null; then
