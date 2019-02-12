@@ -5,5 +5,7 @@
   email = USER_EMAIL
 [credential]
   helper = CREDENTIAL_HELPER
+[github]
+	user = USER_NAME
 # [url "git@github.com:"]
 #   pushInsteadOf = https://github.com/
