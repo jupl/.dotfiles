@@ -1,4 +1,5 @@
 /java/bin/boot
+/macos/.config/karabiner/automatic_backups
 /ssh/.ssh
 /tmux/tpm
 /zsh/antibody
