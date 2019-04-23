@@ -16,3 +16,5 @@ alias mkdir='mkdir -pv'
 alias path='echo -e ${PATH//:/\\n}'
 
 function dotf { (cd $DOTFILES && "$@"); }
+
+function touch { mkdir $(dirname "$1") && command touch "$1" }
