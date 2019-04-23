@@ -22,6 +22,8 @@ fi
 
 # Set up antibody
 if (( $+commands[antibody] )); then
+  autoload -Uz compinit
+  compinit
   export ANTIBODY_HOME="$DOTFILES/zsh/antibody"
   antibody_script="$DOTFILES/zsh/local.zsh"
   antibody_plugins="$ANTIBODY_HOME/plugins"
