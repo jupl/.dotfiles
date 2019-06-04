@@ -59,20 +59,22 @@ installer_rules:=$(addsuffix /install.sh,$(installers))
 # [backup] http://archive.is/XFLAz
 #
 help:
-	@egrep '^(.+)\:\ .*##\ (.+)' ${MAKEFILE_LIST}\
-	| sed 's/:.*##/#/'\
-	| column -t -c 2 -s '#'
 	@echo
-	@echo "OS: $(os)"
+	@echo '=== OS'
+	@echo "$(os)"
 	@echo
-	@echo 'Packages:'
-	@echo "  Install - $(sort $(installers))"
-	@echo "  Symlink - $(sort $(stows))"
-	@echo "    Shell - $(sort $(envs))"
+	@echo '=== Packages'
+	@echo "Install	- $(sort $(installers))"
+	@echo "Symlink	- $(sort $(stows))"
+	@echo "Shell	- $(sort $(envs))"
 	@echo
-	@echo 'Variables:'
-	@echo '  INCLUDE - Packages to only include: $(INCLUDE)'
-	@echo '  EXCLUDE - Packages to exclude: $(EXCLUDE)'
+	@echo '=== Variables'
+	@echo 'INCLUDE	- Packages to only include: $(INCLUDE)'
+	@echo 'EXCLUDE	- Packages to exclude: $(EXCLUDE)'
+	@echo
+	@echo '=== Commands'
+	@egrep '^(.+)\:\ .*##\ (.+)' ${MAKEFILE_LIST} | sed 's/:.*## /	- /'
+	@echo
 clean: ## Clean up
 	@printf '==> '
 	stow -D $(stows)
