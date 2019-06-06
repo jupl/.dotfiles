@@ -10,7 +10,7 @@
       <string>-g</string>
       <string>-j</string>
       <string>-b</string>
-      <string>com.runningwithcrayons.Alfred-3</string>
+      <string>com.runningwithcrayons.Alfred</string>
     </array>
     <key>RunAtLoad</key>
     <true/>
