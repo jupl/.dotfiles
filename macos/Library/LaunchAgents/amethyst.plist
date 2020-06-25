@@ -9,6 +9,7 @@
       <string>open</string>
       <string>-g</string>
       <string>-j</string>
+      <string>-W</string>
       <string>-a</string>
       <string>Amethyst</string>
     </array>
